@@ -1,0 +1,14 @@
+<html>
+<head>
+    {% if title %}
+    <title>{{ title }} - I Love Data!</title>
+    {% else %}
+    <title>Welcome to Matrix, the world of Data!</title>
+    {% endif %}
+</head>
+<body>
+    <div>Project Movie: <a href='/index'>Home</a></div>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
