@@ -42,8 +42,7 @@ def maximize_cv(cv_score, log_likelihood):
         for min_df in min_dfs:         
             vectorizer = CountVectorizer(min_df = min_df)       
             X, Y = make_xy(critics, vectorizer)
-            
-            
+                        
             X_training,xtest,Y_training,ytest = train_test_split(X,Y)
             clf = MultinomialNB(alpha=alpha)
             
@@ -66,7 +65,7 @@ if __name__ == '__main__':
 
     df =  critics.groupby('critic')
     X, Y = make_xy(critics)
-    X_training,xtest,Y_training,ytest = train_test_split(X,Y)
+    X_training, xtest, Y_training, ytest = train_test_split(X,Y)
 
     clf = MultinomialNB()
     clf.fit(X_training,Y_training)
