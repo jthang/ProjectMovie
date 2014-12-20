@@ -5,4 +5,29 @@
     <br> 
     More information <a href="http://jthang.github.io">here</a>.
     </p>
+    <table>
+        <tr id='header'>
+          <th class='sentiment'>Sentiment</th>
+          <th class='review'>Review</th>
+        </tr>
+    </table>
+    <script type='text/javascript'>
+      function addReview() {
+        $.ajax({
+            method: 'GET',
+            url: '/review',
+            cache: false,
+            success: function(data) {
+                $("table tr#header:first").after(data).slideDown('slow');
+                setTimeout(addReview, 1300);                
+            }
+        });
+        $('table tr.review:gt(20)').remove();
+      }
+      
+      $(function() {
+        $("form").inlineFormLabels();
+        setTimeout(addReview, 1300);
+      });
+    </script>
 {% endblock %}
