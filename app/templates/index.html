@@ -6,21 +6,28 @@
     More information <a href="http://jthang.github.io">here</a>.
     </p>
     <form action='/' method='post'>
-        <label for='review' style="display: none;">review</label>
-        <input id='review' name='review' class="has-inline-label"/>
-        <button type='submit'>Check Sentiment</button>
-      </form>
-      <p>
-        <strong>this movie is fantastic</strong>
-        is
-        <span class='other'>a good review</span>
-      </p>
-      <table>
-        <tr id='header'>
-          <th class='language'>Language</th>
-          <th class='review'>review</th>
-        </tr>
-      </table>
+      <label for='review' style="display: none;">review</label>
+      <input id='review' name='review' class="has-inline-label"/>
+      <button type='submit'>Check Sentiment</button>
+    </form>
+    <p>
+      <strong>this movie is fantastic</strong>
+      is
+      <span class='other'>a good review</span>
+    </p>
+    <table>
+      <tr id='header'>
+        <th class='language'>Language</th>
+        <th class='review'>review</th>
+      </tr>
+    </table>
+      
+      
+
+
+
+
+      <!-- 
       <script type='text/javascript'>
           function addReview() {
             $.ajax({
@@ -39,6 +46,6 @@
             $("form").inlineFormLabels();
             setTimeout(addReview, 1300);
           });
-          
       </script>
+      //-->
 {% endblock %}
